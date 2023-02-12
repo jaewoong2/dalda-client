@@ -16,9 +16,7 @@ import { worker } from './mocks/browser'
 
 const queryClient = new QueryClient()
 
-if (import.meta.env.MODE === 'development') {
-  worker.start({ onUnhandledRequest: 'bypass' })
-}
+worker.start({ onUnhandledRequest: 'bypass' })
 // eslint-disable-next-line global-require
 // worker.stop()
 
