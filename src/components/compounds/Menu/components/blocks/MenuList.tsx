@@ -29,11 +29,14 @@ const getBellStyle = () =>
     'bg-brand-300 flex items-center justify-center rounded-full text-grayScale-700'
   )
 
+// const getLoginURL = (registerId: string) => {
+//   return import.meta.env.MODE === 'development'
+//     ? `/login/${registerId}`
+//     : `${baseURL}/oauth2/authorization/${registerId}`
+// }
 const getLoginURL = (registerId: string) => {
-  return import.meta.env.MODE === 'development'
-    ? `/login/${registerId}`
-    : `${baseURL}/oauth2/authorization/${registerId}`
-}
+  return `/login/${registerId}`
+// }
 
 const logoutURL = import.meta.env.MODE === 'development' ? `/logout` : `${baseURL}/logout`
 
