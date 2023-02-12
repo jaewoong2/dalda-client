@@ -36,6 +36,7 @@ const getBellStyle = () =>
 // }
 const getLoginURL = (registerId: string) => {
   return `/login/${registerId}`
+}
 // }
 
 const logoutURL = import.meta.env.MODE === 'development' ? `/logout` : `${baseURL}/logout`
