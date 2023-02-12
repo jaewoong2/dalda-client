@@ -33,9 +33,9 @@ class Http {
   private instance: AxiosInstance | null = null
 
   // public baseURL: string = 'https://dev.dalda.shop'
-//   public baseURL: string = import.meta.env.DEV ? '' : 'https://api.dalda.shop'
-  public baseURL = ''
-  
+  // public baseURL: string = import.meta.env.DEV ? '' : 'https://api.dalda.shop'
+  public baseURL: string = ''
+
   get http(): AxiosInstance {
     return this.instance ?? this.initHttp()
   }
